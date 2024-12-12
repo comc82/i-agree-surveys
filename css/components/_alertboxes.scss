@@ -1,0 +1,81 @@
+.alert-box {
+	display: block;
+	padding: $narrow-padding;
+	border: solid 1px transparent;
+	position: relative;
+	padding-left: 80px;
+	margin-bottom: $wide-padding;
+	
+	&:before {
+		content:"";
+		display:inline-block;
+		width:60px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+	}
+	&.info,
+	&.success,
+	&.danger,
+	&.warning {
+		&:after {
+			display: inline-block;
+			font: normal normal normal 14px/1 iagree;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			font-size: 26px;
+			position: absolute;
+			top: 9px;
+			left: 19px;
+		}
+	}
+}
+
+.alert-box {
+	&.info {
+		color: darken($info, 20%);
+		background-color: lighten($info, 42%);
+		&:before {
+			background-color: $info;
+		}
+		&:after {
+			color:lighten($info, 42%);
+			content:"\f05a";
+		}
+	}
+	&.success {
+		color: darken($success, 20%);
+		background-color: lighten($success, 42%);
+		&:before {
+			background-color: $success;
+		}
+		&:after {
+			color:lighten($success, 42%);
+			content:"\f058";
+		}
+	}
+	&.danger {
+		color: darken($danger, 20%);
+		background-color: lighten($danger, 42%);
+		&:before {
+			background-color: $danger;
+		}
+		&:after {
+			color:lighten($danger, 42%);
+			content:"\f057";
+		}
+	}
+	&.warning {
+		color: darken($warning, 20%);
+		background-color: lighten($warning, 42%);
+		&:before {
+			background-color: $warning;
+		}
+		&:after {
+			color:lighten($warning, 42%);
+			content:"\f06a";
+		}
+	}
+}

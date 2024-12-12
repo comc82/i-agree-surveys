@@ -1,0 +1,123 @@
+[
+	{
+		"questionId": "quest-1",
+		"questionText": "I get excited about going to work.",
+		"questionCopyText": "I get excited about going to work.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-2",
+		"questionText": "I am satisfied with the job-related training my organization offers.",
+		"questionCopyText": "I am satisfied with the job-related training my organization offers.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-3",
+		"questionText": "I am compensated fairly relative to my local market.",
+		"questionCopyText": "I am compensated fairly relative to my local market.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-4",
+		"questionText": "I am determined to give my best effort at work each day.",
+		"questionCopyText": "I am determined to give my best effort at work each day.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-5",
+		"questionText": "My organization operates in a socially responsible manner.",
+		"questionCopyText": "My organization operates in a socially responsible manner.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-6",
+		"questionText": "Employees in my organization willingly accept change.",
+		"questionCopyText": "Employees in my organization willingly accept change.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-7",
+		"questionText": "Employees here are willing to take on new tasks as needed.",
+		"questionCopyText": "Employees here are willing to take on new tasks as needed.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-8",
+		"questionText": "When at work, I am completely focused on my job duties.",
+		"questionCopyText": "When at work, I am completely focused on my job duties.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-9",
+		"questionText": "I am satisfied with the amount of paid leave offered by my organization.",
+		"questionCopyText": "I am satisfied with the amount of paid leave offered by my organization.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-10",
+		"questionText": "My organization's fiscal well-being is stable.",
+		"questionCopyText": "My organization's fiscal well-being is stable.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-11",
+		"questionText": "I am satisfied with my overall job security.",
+		"questionCopyText": "I am satisfied with my overall job security.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-12",
+		"questionText": "I feel completely involved in my work.",
+		"questionCopyText": "I feel completely involved in my work.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-13",
+		"questionText": "My organization has a safe work environment.",
+		"questionCopyText": "My organization has a safe work environment.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-14",
+		"questionText": "My organization is dedicated to my professional development.",
+		"questionCopyText": "My organization is dedicated to my professional development.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-15",
+		"questionText": "I am satisfied with my total benefits package.",
+		"questionCopyText": "I am satisfied with my total benefits package.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-16",
+		"questionText": "My organization's work positively impacts people's lives.",
+		"questionCopyText": "My organization's work positively impacts people's lives.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-17",
+		"questionText": "I am pleased with the career advancement opportunities available to me.",
+		"questionCopyText": "I am pleased with the career advancement opportunities available to me.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-18",
+		"questionText": "My coworkers and I have a good working relationship.",
+		"questionCopyText": "My coworkers and I have a good working relationship.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-19",
+		"questionText": "I understand how my work impacts the organization's business goals.",
+		"questionCopyText": "I understand how my work impacts the organization's business goals.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-20",
+		"questionText": "Employees treat each other with respect.",
+		"questionCopyText": "Employees treat each other with respect.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-21",
+		"questionText": "I am often so involved in my work that the day goes by very quickly.",
+		"questionCopyText": "I am often so involved in my work that the day goes by very quickly.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-22",
+		"questionText": "I am satisfied that I have the opportunities to apply my talents and expertise.",
+		"questionCopyText": "I am satisfied that I have the opportunities to apply my talents and expertise.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-23",
+		"questionText": "Senior management and employees trust each other.",
+		"questionCopyText": "Senior management and employees trust each other.",
+		"questionExpAnswer": "Yes"
+	}, {
+		"questionId": "quest-24",
+		"questionText": "I am satisfied with my overall compensation.",
+		"questionCopyText": "I am satisfied with my overall compensation.",
+		"questionExpAnswer": "Yes"
+	}
+]

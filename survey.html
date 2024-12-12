@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head id="Head1">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>
+		I Agree Dashboard 
+	</title>
+	<link rel="stylesheet" href="css/app.css">
+	<link href="css/survey.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/joyride-2.1.css">
+</head>
+<body class="survey tempoe">
+    <form name="form1" method="post" action="SurveyPreview.aspx?GroupId=1" onsubmit="javascript:return WebForm_OnSubmit();" id="form1" novalidate="">
+		<header>
+			<div class="pure-g">
+				<div class="pure-u-1-1 pure-u-xl-1-4 pure-u-lg-2-6 pure-u-md-3-8 pure-u-sm-1-1">
+					<a href="index.html"><img src="images/iagree-logo.png" class="img-responsive"/></a>
+				</div>
+				<div class="pure-u-1-1 pure-u-xl-3-4 pure-u-lg-4-6 pure-u-md-5-8 pure-u-sm-1-1">
+					<div class="pure-menu pure-menu-horizontal">
+						<ul class="pure-menu-list">
+							<li class="pure-menu-item" id="numero1"><a href="index.html" class="pure-menu-link">Surveys</a></li>
+							<li class="pure-menu-item" id="numero2"><a href="escalation.html" class="pure-menu-link">Escalation Emails</a></li>
+							<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover" id="numero3"><a href="#" class="pure-menu-link">Reports</a>
+								<ul class="pure-menu-children">
+									<li class="pure-menu-item"><a href="adhoc.html" class="pure-menu-link">Ad-hoc Analysis</a></li>
+									<li class="pure-menu-item"><a href="count.html" class="pure-menu-link">Count Report</a></li>
+									<li class="pure-menu-item"><a href="reporting.html" class="pure-menu-link">Reporting</a></li>
+								</ul>
+							</li>
+							<li class="pure-menu-item" id="numero4"><a href="#" class="pure-menu-link" id="btnHelp">Help</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+		</header>
+		<main>
+			<div class="pure-g survey-header">
+				<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-sm-1-2">
+					<h2 class="title">
+						<span id="lblTitle">Marcell Store Survey Preview</span>
+					</h2>
+					<span id="lblError" class="txt_error"></span>
+				</div>
+				<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-sm-1-2 text-right">
+					<small>You are logged in as <strong><span id="lblUser">Store User</span></strong><br/>
+                    </small>
+				</div>
+			</div>
+			<div class="pure-g survey-question-wrapper">
+				<div class="l-box pure-u-1">
+					<ol class="list-unstyled">
+						
+<li class="pure-g-marginb">
+	<p><strong><span id="Question_1_lblQuestion">1. I am satisfied with the job-related training my organization offers.</span></strong></p>
+	<small class="help-error"><span id="Question_1_RequiredFieldValidator1" class="text_warning" style="display:none;">Answer is required</span></small>
+	<table id="Question_1_rblAnswers" class="radio-group" border="0">
+	<tr>
+		<td><input id="Question_1_rblAnswers_0" type="radio" name="Question_1$rblAnswers" value="none" /><label for="Question_1_rblAnswers_0">Yes</label></td><td><input id="Question_1_rblAnswers_1" type="radio" name="Question_1$rblAnswers" value="block" /><label for="Question_1_rblAnswers_1">No</label></td>
+	</tr>
+</table>
+
+
+	<div id="Question_1_trTextBox" style="display:none;">
+		<br/>
+		<span>Please enter a comment:</span><br/>
+		<span id="Question_1_cvComments" class="help-error" style="display:none;">Comment must be at least 5 characters.</span><br/>
+		<textarea name="Question_1$txtComment" rows="2" cols="20" id="Question_1_txtComment" class="survey-comment"></textarea>
+	</div>
+</li>
+<li class="pure-g-marginb">
+	<p><strong><span id="Question_1_lblQuestion">2. I am determined to give my best effort at work each day.</span></strong></p>
+	<small class="help-error"><span id="Question_1_RequiredFieldValidator1" class="text_warning" style="display:none;">Answer is required</span></small>
+	<table id="Question_1_rblAnswers" class="radio-group" border="0">
+	<tr>
+		<td><input id="Question_1_rblAnswers_0" type="radio" name="Question_2$rblAnswers" value="none" /><label for="Question_1_rblAnswers_0">Yes</label></td><td><input id="Question_2_rblAnswers_2" type="radio" name="Question_2$rblAnswers" value="block" /><label for="Question_2_rblAnswers_2">No</label></td>
+	</tr>
+</table>
+
+
+	<div id="Question_1_trTextBox" style="display:none;">
+		<br/>
+		<span>Please enter a comment:</span><br/>
+		<span id="Question_1_cvComments" class="help-error" style="display:none;">Comment must be at least 5 characters.</span><br/>
+		<textarea name="Question_1$txtComment" rows="2" cols="20" id="Question_1_txtComment" class="survey-comment"></textarea>
+	</div>
+</li>
+<li class="pure-g-marginb">
+	<p><strong><span id="Question_1_lblQuestion">3. I understand how my work impacts the organization's business goals.</span></strong></p>
+	<small class="help-error"><span id="Question_1_RequiredFieldValidator1" class="text_warning" style="display:none;">Answer is required</span></small>
+	<table id="Question_1_rblAnswers" class="radio-group" border="0">
+	<tr>
+		<td><input id="Question_1_rblAnswers_0" type="radio" name="Question_1$rblAnswers" value="none" /><label for="Question_1_rblAnswers_0">Yes</label></td><td><input id="Question_1_rblAnswers_1" type="radio" name="Question_1$rblAnswers" value="block" /><label for="Question_1_rblAnswers_1">No</label></td>
+	</tr>
+</table>
+
+
+	<div id="Question_1_trTextBox" style="display:none;">
+		<br/>
+		<span>Please enter a comment:</span><br/>
+		<span id="Question_1_cvComments" class="help-error" style="display:none;">Comment must be at least 5 characters.</span><br/>
+		<textarea name="Question_1$txtComment" rows="2" cols="20" id="Question_1_txtComment" class="survey-comment"></textarea>
+	</div>
+</li>
+<li class="pure-g-marginb">
+	<p><strong><span id="Question_1_lblQuestion">4. Senior management and employees trust each other.</span></strong></p>
+	<small class="help-error"><span id="Question_1_RequiredFieldValidator1" class="text_warning" style="display:none;">Answer is required</span></small>
+	<table id="Question_1_rblAnswers" class="radio-group" border="0">
+	<tr>
+		<td><input id="Question_1_rblAnswers_0" type="radio" name="Question_1$rblAnswers" value="none" /><label for="Question_1_rblAnswers_0">Yes</label></td><td><input id="Question_1_rblAnswers_1" type="radio" name="Question_1$rblAnswers" value="block" /><label for="Question_1_rblAnswers_1">No</label></td>
+	</tr>
+</table>
+
+
+	<div id="Question_1_trTextBox" style="display:none;">
+		<br/>
+		<span>Please enter a comment:</span><br/>
+		<span id="Question_1_cvComments" class="help-error" style="display:none;">Comment must be at least 5 characters.</span><br/>
+		<textarea name="Question_1$txtComment" rows="2" cols="20" id="Question_1_txtComment" class="survey-comment"></textarea>
+	</div>
+</li>
+<li class="pure-g-marginb">
+	<p><strong><span id="Question_1_lblQuestion">5. I am satisfied with my overall job security.</span></strong></p>
+	<small class="help-error"><span id="Question_1_RequiredFieldValidator1" class="text_warning" style="display:none;">Answer is required</span></small>
+	<table id="Question_1_rblAnswers" class="radio-group" border="0">
+	<tr>
+		<td><input id="Question_1_rblAnswers_0" type="radio" name="Question_1$rblAnswers" value="none" /><label for="Question_1_rblAnswers_0">Yes</label></td><td><input id="Question_1_rblAnswers_1" type="radio" name="Question_1$rblAnswers" value="block" /><label for="Question_1_rblAnswers_1">No</label></td>
+	</tr>
+</table>
+
+
+	<div id="Question_1_trTextBox" style="display:none;">
+		<br/>
+		<span>Please enter a comment:</span><br/>
+		<span id="Question_1_cvComments" class="help-error" style="display:none;">Comment must be at least 5 characters.</span><br/>
+		<textarea name="Question_1$txtComment" rows="2" cols="20" id="Question_1_txtComment" class="survey-comment"></textarea>
+	</div>
+</li>
+<li class="pure-g-marginb">
+	<p><strong><span id="Question_1_lblQuestion">6. I feel completely involved in my work.</span></strong></p>
+	<small class="help-error"><span id="Question_1_RequiredFieldValidator1" class="text_warning" style="display:none;">Answer is required</span></small>
+	<table id="Question_1_rblAnswers" class="radio-group" border="0">
+	<tr>
+		<td><input id="Question_1_rblAnswers_0" type="radio" name="Question_1$rblAnswers" value="none" /><label for="Question_1_rblAnswers_0">Yes</label></td><td><input id="Question_1_rblAnswers_1" type="radio" name="Question_1$rblAnswers" value="block" /><label for="Question_1_rblAnswers_1">No</label></td>
+	</tr>
+</table>
+
+
+	<div id="Question_1_trTextBox" style="display:none;">
+		<br/>
+		<span>Please enter a comment:</span><br/>
+		<span id="Question_1_cvComments" class="help-error" style="display:none;">Comment must be at least 5 characters.</span><br/>
+		<textarea name="Question_1$txtComment" rows="2" cols="20" id="Question_1_txtComment" class="survey-comment"></textarea>
+	</div>
+</li>
+
+					</ol>
+
+				</div>
+			</div>
+<div class="pure-g">
+						<div class="l-box pure-u-1">
+							<button type="button" class="pure-button button-large pure-button-primary" id="q-saveConfig">SUBMIT</button>
+						</div>
+					</div>
+			
+		<br><br>
+		</main>
+		<footer class="pure-g l-box">
+			<div class="pure-u-1 survey-footer">
+				<div class="alert-box info">
+					<p>You can call the fraud hotline anonymously at <span id="lblFraud" style="text-decoration:none;">0131-000-0000</span> or email <a id="hlHumanResourceus" href="mailto:TIP@axcesseurope.com">TIP@marcell.com</a> if you become aware of any fraud or other criminal activity against the company.</p>
+				</div>
+				<br>
+				<small>Human Resources policies can be found in the <a id="hlHumanResources" href="http://www.google.com" target="_blank">Area Portal</a>.<br>Company Policies can be found under the relevant department in the <a id="hlCompanyPolicies" href="http://www.google.com" target="_blank">Area Portal</a>.</small>
+			</div>
+		</footer>
+		
+		<!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-id="numero1" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see the list of surveys.</h5>
+		<br/>
+      </li>
+      <li data-id="numero2" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the escalation emails. You also can add or edit them.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero3" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the reports.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero4" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can restart this tutorial.</h5>
+		<br/>
+      </li>
+      <li data-id="numero5" data-button="Next" data-options="tipLocation:left;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the questions. To add a question, first make a search, if doesn´t exist you can create it with the "Add New Question" link.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero6" data-button="Close" data-options="tipLocation:right;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see the questions already added to the current survey. You also can add, edit or remove them from the survey.</h5>
+		<br/>
+      </li>
+    </ol>
+	
+	<script src="js/app-dist.js"></script>
+	
+</form>
+</body>
+</html>
+

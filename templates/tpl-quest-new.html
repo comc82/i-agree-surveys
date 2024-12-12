@@ -1,0 +1,74 @@
+<div class="q-single editing" id="{{questionId}}">
+    <div class="pure-g">
+        <div class="pure-u-1 q-row">
+            <div class="q-number">{{}}</div>
+            <div class="q-text pure-control-group">
+                <label class="hidden" for="qText_{{questionId}}">Question</label>
+                <span class="hidden"></span>
+                <textarea rows="3" class=" pure-u-1 pure-u-md-24-24 required" id="qText_{{questionId}}" name="qText_{{questionId}}">{{questionText}}</textarea>
+            </div>
+            <div class="q-buttons">
+                <a href="#/" class="q-edit icon-button" title="Edit" data-question-id="'+obj.dataset.questionId+'" data-toggle="tooltip" data-placement="top" aria-label="Edit"><i class="icon-pencil"></i></a>
+                <a href="#/" class="q-arrange icon-button q-handler" title="Arrange" data-toggle="tooltip" data-placement="top" aria-label="Arrange"><i class="icon-arrows-v"></i></a>
+                <a href="#/" class="q-remove icon-button" title="Remove" data-question-id="'+obj.dataset.questionId+'" data-toggle="tooltip" data-placement="top" aria-label="Remove"><i class="icon-trash"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g q-config">
+        <div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+            <div class="pure-control-group">
+                <label for="activeFrom_{{questionId}}">Active From:</label>
+                <div class="pure-u-1 pure-u-md-12-24">
+                    <div class="input-group">
+                        <input type="text" placeholder="mm/dd/yyyy" class="required input-group-control datepicker" id="activeFrom_{{questionId}}" name="activeFrom_{{questionId}}">
+                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-control-group">
+                <label for="activeTo_{{questionId}}">Active To:</label>
+                <div class="pure-u-1 pure-u-md-12-24">
+                    <div class="input-group">
+                        <input type="text" placeholder="mm/dd/yyyy" class="required input-group-control datepicker" id="activeTo_{{questionId}}" name="activeTo_{{questionId}}">
+                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+            <div class="pure-control-group escMethodControl">
+                <label for="escMethod_{{questionId}}">Escalation Method:</label>
+                <div class="pure-u-1 pure-u-md-12-24">
+                    <select id="escMethod_{{questionId}}" class="pure-u-1 pure-u-md-21-24 escMethod required" name="escMethod_{{questionId}}">
+                        <option value="">Select</option>
+                        <option value="escalation-email">Escalation Email</option>
+                        <option value="email-hierarchy">Email Field Hierarchy</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pure-control-group hidden escEmailControl">
+                <label for="escEmail_{{questionId}}">Escalation Email:</label>
+                <div class="pure-u-1 pure-u-md-12-24">
+                    <select id="escEmail_{{questionId}}" class="pure-u-1 pure-u-md-21-24 escEmail required" name="escEmail_{{questionId}}">
+                        <option value="">Select</option>
+                        <option value="ajbendezu@tempoe.com">ajbendezu@tempoe.com</option>
+                        <option value="info@tempoe.com">info@tempoe.com</option>
+                        <option value="tempoeteam@tempoe.com">tempoeteam@tempoe.com</option>
+                        <option value="new-esc-email">Add New Email</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-6-24 q-conf-col">
+            <div class="pure-control-group">
+                <span class="label">Expected Answer:</span>
+                <label class="pure-radio">
+                    <input id="yes_{{questionId}}" type="radio" name="expectedAns_{{questionId}}" class="required input-radio" value="Yes" checked="checked"> Yes
+                </label>
+                <label class="pure-radio">
+                    <input id="no_{{questionId}}" type="radio" name="expectedAns_{{questionId}}" class="required input-radio" value="No"> No
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

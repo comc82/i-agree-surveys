@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<title>
+		I Agree Dashboard 
+	</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/app.css">	
+	<link rel="stylesheet" href="css/joyride-2.1.css">
+</head>
+
+<body>
+	<header>
+		<div class="pure-g">
+			<div class="pure-u-1-1 pure-u-xl-1-4 pure-u-lg-2-6 pure-u-md-3-8 pure-u-sm-1-1">
+				<a href="index.html"><img src="images/iagree-logo.png" class="img-responsive"/></a>
+			</div>
+			<div class="pure-u-1-1 pure-u-xl-3-4 pure-u-lg-4-6 pure-u-md-5-8 pure-u-sm-1-1">
+				<div class="pure-menu pure-menu-horizontal">
+					<ul class="pure-menu-list">
+						<li class="pure-menu-item" id="numero1"><a href="index.html" class="pure-menu-link">Surveys</a></li>
+						<li class="pure-menu-item" id="numero2"><a href="escalation.html" class="pure-menu-link">Escalation Emails</a></li>
+						<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover" id="numero3"><a href="#" class="pure-menu-link">Reports</a>
+							<ul class="pure-menu-children">
+								<li class="pure-menu-item"><a href="adhoc.html" class="pure-menu-link">Ad-hoc Analysis</a></li>
+								<li class="pure-menu-item"><a href="count.html" class="pure-menu-link">Count Report</a></li>
+								<li class="pure-menu-item"><a href="reporting.html" class="pure-menu-link">Reporting</a></li>
+							</ul>
+						</li>
+						<li class="pure-menu-item" id="numero4"><a href="#" class="pure-menu-link" id="btnHelp">Help</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+	</header>
+	
+	<main>
+	<form class="pure-form" action="http://www.google.com" id="surveyConfig" novalidate>
+		<div class="pure-g">
+			<div class="pure-u-1">
+				<h2 class="title">IAgree Tempoe Do Ad-hoc Analysis</h2>
+			</div>
+		</div>
+		
+		<div class="pure-g">
+			<div class="pure-u-1 pure-u-md-1-4 pure-u-sm-1-2 pure-g-marginb">
+				<div class="pure-control-group">
+					<label class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1" for="activeFrom_adhoc-1">Responses From:</label>
+					<div class="pure-u-lg-7-8 pure-u-md-3-4 pure-u-sm-11-12">
+						<div class="input-group">
+							<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control datepicker" id="activeFrom_adhoc-1" name="activeFrom_adhoc-1" />
+							<span class="input-group-addon"><i class="icon-calendar"></i></span>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-4 pure-u-sm-1-2 pure-g-marginb">
+				<div class="pure-control-group"> 
+					<label class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1" for="activeTo_adhoc-1">Responses To:</label>
+					<div class="pure-u-lg-7-8 pure-u-md-3-4 pure-u-sm-11-12">	
+						<div class="input-group">
+							<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control datepicker" id="activeTo_adhoc-1" name="activeTo_adhoc-1" />
+							<span class="input-group-addon"><i class="icon-calendar"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-4 pure-u-sm-1-2 pure-g-marginb">
+				<label for="ddlGroups" class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1">Group:</label>
+				<select class="pure-u-1-1 pure-u-lg-7-8 pure-u-md-3-4 pure-u-sm-11-12 required-field"><option>All</option></select>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-4 pure-u-sm-1-2 pure-g-marginb">
+				<label for="ddlUsers" class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1">Employee:</label>
+				<select class="pure-u-1-1 pure-u-lg-7-8 pure-u-md-3-4 pure-u-sm-11-12 required-field"><option>All</option></select>
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-1 pure-u-md-1-4 pure-u-sm-1-2 pure-g-marginb">
+				<label for="ddlStore" class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1">Store: </label>
+				<select class="pure-u-1-1 pure-u-lg-7-8 pure-u-md-3-4 pure-u-sm-11-12 required-field"><option>All</option></select>
+			</div>
+			<div class="pure-u-1 pure-u-md-3-4 pure-u-sm-1-1 pure-g-marginb">
+				<label for="ddlStatement" class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1">Question:</label>
+				<select class="pure-u-1-1 pure-u-lg-23-24 pure-u-md-22-24 pure-u-sm-23-24 required-field"><option>All</option></select>
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-1 pure-g-marginb">
+				<input type="button" ID="btnSearch" value="Search" class="pure-button pure-button-primary" OnClick="btnSearch_Click"></input>
+				<input type="button" ID="btnExportExcel" value="Export to Excel" class="pure-button pure-button-primary" OnClick="btnExportExcel_Click"></input>
+			</div>
+		</div>
+	</form>	
+	</main>
+	<footer>
+			<div class="pure-g">
+				<div class="pure-u-1">
+					&copy; 2016 TEMPOE
+				</div>
+			</div>
+	</footer>
+	
+	<!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-id="numero1" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see the list of surveys.</h5>
+		<br/>
+      </li>
+      <li data-id="numero2" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the escalation emails. You also can add or edit them.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero3" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the reports.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero4" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can restart this tutorial.</h5>
+		<br/>
+      </li>
+      <li data-id="numero5" data-button="Next" data-options="tipLocation:left;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the questions. To add a question, first make a search, if doesn´t exist you can create it with the "Add New Question" link.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero6" data-button="Close" data-options="tipLocation:right;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see the questions already added to the current survey. You also can add, edit or remove them from the survey.</h5>
+		<br/>
+      </li>
+    </ol>
+	
+	<script src="js/app-dist.js"></script>
+</body>
+</html>
+
+

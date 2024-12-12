@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'> 
+	<title>
+		I Agree Dashboard 
+	</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/joyride-2.1.css">
+</head>
+
+<body>
+	<header>
+		<div class="pure-g">
+			<div class="pure-u-1-1 pure-u-xl-1-4 pure-u-lg-2-6 pure-u-md-3-8 pure-u-sm-1-1">
+				<a href="index.html"><img src="images/iagree-logo.png" class="img-responsive"/></a>
+			</div>
+			<div class="pure-u-1-1 pure-u-xl-3-4 pure-u-lg-4-6 pure-u-md-5-8 pure-u-sm-1-1">
+				<div class="pure-menu pure-menu-horizontal">
+					<ul class="pure-menu-list">
+						<li class="pure-menu-item" id="numero1"><a href="index.html" class="pure-menu-link">Surveys</a></li>
+						<li class="pure-menu-item" id="numero2"><a href="escalation.html" class="pure-menu-link">Escalation Emails</a></li>
+						<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover" id="numero3"><a href="#" class="pure-menu-link">Reports</a>
+							<ul class="pure-menu-children">
+								<li class="pure-menu-item"><a href="adhoc.html" class="pure-menu-link">Ad-hoc Analysis</a></li>
+								<li class="pure-menu-item"><a href="count.html" class="pure-menu-link">Count Report</a></li>
+								<li class="pure-menu-item"><a href="reporting.html" class="pure-menu-link">Reporting</a></li>
+							</ul>
+						</li>
+						<li class="pure-menu-item" id="numero4"><a href="#" class="pure-menu-link" id="btnHelp">Help</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+	</header>
+	
+		
+	<main>
+	<div class="pure-g">
+			<div class="pure-u-1">
+				<h2 class="h2 title">CONFIGURE SURVEY</h2>
+			</div>
+		</div>
+	
+		<div class="pure-g">
+			<div class="pure-u-1 pure-u-sm-1 pure-u-md-7-24 q-bank" >
+				<!--Question Bank-->
+				<div class="panel" id="numero5">
+					<div class="panel panel-header">
+						<h3 class="title-sect">Question Bank</h3> <!--<a href="#/" class="pure-button q-blank" data-question-id="quest-new" data-question-text="" data-question-exp-answer="">Add New Question</a>-->
+					</div>
+					<div class="panel panel-body">
+
+						<div id="q-search-results">
+							<div class="pure-form pure-form-aligned margin-search">
+								<div class="input-group">
+									  <span class="input-group-addon search-addon"><strong>Search</strong></span>
+									  <input placeholder="Enter keywords" id="txtSearchQuest" class="fuzzy-search input-group-control search" >
+								</div>		
+							</div>
+							<div id="q-show-all-quests" class="show-questions"><strong>SHOWING:</strong> All Questions</div>
+							<div id="q-show-matching-quests" class="hidden show-questions"><strong>SHOWING:</strong> Matching Questions</div>
+							<!-- 
+							<div class="dimmer" id="q-dimmer">
+								<div class="spinner"></div>
+							</div>
+							 -->
+							<!-- Results here -->
+							<div id="q-slimScroll">
+								<ul class="list-unstyled results list"></ul>
+								<div id="bummer-box">
+									<i class="icon-question-circle"></i><br><br>The question you are looking for does not exist?<br><a href="#/" class="q-blank pure-button pure-button-primary" data-question-id="quest-new" data-question-text="" data-question-exp-answer="">Add New Question to the Bank</a>
+								</div>
+							</div>
+							<ul class="pagination pagination-sm list-unstyled"></ul>
+							<!-- ./Results here -->
+						</div>
+						<!--<br/>
+						<div style="padding-top: 25px; padding-bottom: 15px;">
+							Didn't find the question you wanted? <a href="#/" class="q-blank" data-question-id="" data-question-text="" data-question-exp-answer=""><strong>Add New Question</strong></a>
+						</div>-->
+					</div>
+				</div>
+				<!--./Question Bank-->
+			</div>
+			<div class="pure-u-1 pure-u-sm-1 pure-u-md-17-24 q-main" id="numero6">
+				<div class="pure-g">
+					<div class="pure-u-1-2 pure-u-sm-12-24 pure-u-md-12-24">
+						<h3 class="h3 title-sect">Marcell Store Survey Questions</h3>
+					</div>
+					<div class="pure-u-1-2 pure-u-sm-12-24 pure-u-md-12-24 text-right">
+						<strong>TOTAL: <span id="qCounter"></span></strong>
+					</div>
+				</div>
+				<!--Warning-->
+				<!--
+				<div class="alert-box warning hidden" id="editWarning">
+					Please, <strong>do not change the meaning of the existing questions</strong>. Amend typos and punctuation errors only.<br/>To create a new question, use the Add New Question button in the Question Bank panel.
+				</div>
+				-->
+				<div class="alert-box info hidden" id="info">
+					This group does not contain any questions.<br/><strong>To add questions, use the Add to Survey buttons below each question in the Question Bank panel.</strong>
+				</div>
+				<!--./Warning-->
+				<form class="pure-form" action="/" id="surveyConfig" novalidate>
+					<div id="qlist" >
+						<!--Question List-->
+						<!--Single Question-->
+						<div class="q-single" id="quest-1">
+							<div class="pure-g">
+								<div class="pure-u-1 q-row">
+									<div class="q-number"></div>
+									<div class="q-text pure-control-group"><span>I get excited about going to work.</span></div>
+									<div class="q-buttons">
+										<a href="#/" class="q-edit icon-button" title="Edit" data-question-id="quest-1" data-toggle="tooltip" data-placement="top"><i class="icon-pencil"></i></a>
+										<a href="#/" class="q-arrange q-handler icon-button" title="Click and drag to arrange" data-toggle="tooltip" data-placement="top"><i class="icon-arrows-v"></i></a>
+										<a href="#/" class="q-remove icon-button" title="Remove" data-question-id="quest-1" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></a>
+									</div>
+								</div> 
+							</div>
+							<div class="pure-g q-config hidden">
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group">
+										<label class="" for="activeFrom_quest-1">Active From:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeFrom_quest-1" name="activeFrom_quest-1" value="01/01/2016" />
+												<span class="input-group-addon">
+													<i class="icon-calendar"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="pure-control-group">
+										<label class="" for="activeTo_quest-1">Active To:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeTo_quest-1" name="activeTo_quest-1" value="12/12/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group escMethodControl">
+										<label class="" for="escMethod_quest-1">Escalation Method:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escMethod_quest-1" class="pure-u-1 pure-u-md-21-24 required-field escMethod" name="escMethod_quest-1">
+												<option value="">Select</option>
+												<option value="escalation-email" selected="selected">Escalation Email</option>
+												<option value="email-hierarchy">Email Field Hierarchy</option>
+											</select>
+										</div>
+									</div>
+									<div class="pure-control-group escEmailControl">
+										<label class="" for="escEmail_quest-1">Escalation Email:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escEmail_quest-1" class="pure-u-1 pure-u-md-21-24 required-field escEmail" name="escEmail_quest-1">
+												<option value="">Select</option>
+												<option value="director@marcell.com" selected="selected">director@marcell.com</option>
+												<option value="info@marcell.com">info@marcell.com</option>
+												<option value="marcellteam@marcell.com">marcellteam@marcell.com</option>
+												<option value="new-esc-email">Add New Email</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-6-24 q-conf-col">
+									<div class="pure-control-group">
+										<span class="label">Expected Answer:</span>
+										<label for="yes_quest-1" class="pure-radio">
+											<input id="yes_quest-1" type="radio" name="expectedAns_quest-1" checked="checked" class="required-field"> Yes
+										</label>
+										<label for="no_quest-1" class="pure-radio">
+											<input id="no_quest-1" type="radio" name="expectedAns_quest-1" class="required-field"> No
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--./Single Question-->
+						<!--Single Question-->
+						<div class="q-single" id="quest-2">
+							<div class="pure-g">
+								<div class="pure-u-1 q-row">
+									<div class="q-number"></div>
+									<div class="q-text pure-control-group"><span>I am satisfied with the job-related training my organization offers.</span></div>
+									<div class="q-buttons">
+										<a href="#/" class="q-edit icon-button" title="Edit" data-question-id="quest-2" data-toggle="tooltip" data-placement="top" aria-label="Edit"><i class="icon-pencil"></i></a>
+										<a href="#/" class="q-arrange icon-button q-handler" title="Click and drag to arrange" data-toggle="tooltip" data-placement="top" aria-label="Arrange"><i class="icon-arrows-v"></i> <span class="hidden">Arrange</span></a>
+										<a href="#/" class="q-remove icon-button" title="Remove" data-question-id="quest-2" data-toggle="tooltip" data-placement="top" aria-label="Remove"><i class="icon-trash"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="pure-g q-config hidden">
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group">
+										<label class="" for="activeFrom_quest-2">Active From:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeFrom_quest-2" name="activeFrom_quest-2" value="01/01/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="pure-control-group">
+										<label class="" for="activeTo_quest-2">Active To:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeTo_quest-2" name="activeTo_quest-2" value="12/12/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group escMethodControl">
+										<label class="" for="escMethod_quest-2">Escalation Method:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escMethod_quest-2" class="pure-u-1 pure-u-md-21-24 required-field escMethod" name="escMethod_quest-2">
+												<option value="">Select</option>
+												<option value="escalation-email">Escalation Email</option>
+												<option value="email-hierarchy" selected="selected">Email Field Hierarchy</option>
+											</select>
+										</div>
+									</div>
+									<div class="pure-control-group escEmailControl">
+										<label class="" for="escEmail_quest-2">Escalation Email:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escEmail_quest-2" class="pure-u-1 pure-u-md-21-24 required-field escEmail" name="escEmail_quest-2">
+												<option value="">Select</option>
+												<option value="director@marcell.com">director@marcell.com</option>
+												<option value="info@marcell.com">info@marcell.com</option>
+												<option value="marcellteam@marcell.com" selected="selected">marcellteam@marcell.com</option>
+												<option value="new-esc-email">Add New Email</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-6-24 q-conf-col">
+									<div class="pure-control-group">
+										<span class="label">Expected Answer:</span>
+										<label for="yes_quest-2" class="pure-radio">
+											<input id="yes_quest-2" type="radio" name="expectedAns_quest-2" checked="checked" class="required-field"> Yes
+										</label>
+										<label for="no_quest-2" class="pure-radio">
+											<input id="no_quest-2" type="radio" name="expectedAns_quest-2" class="required-field"> No
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--./Single Question-->
+						<!--Single Question-->
+						<div class="q-single" id="quest-24">
+							<div class="pure-g">
+								<div class="pure-u-1 q-row">
+									<div class="q-number"></div>
+									<div class="q-text pure-control-group"><span>I am satisfied with my overall compensatio.</span></div>
+									<div class="q-buttons">
+										<a href="#/" class="q-edit icon-button" title="Edit" data-question-id="quest-24" data-toggle="tooltip" data-placement="top" aria-label="Edit"><i class="icon-pencil"></i></a>
+										<a href="#/" class="q-arrange icon-button q-handler" title="Click and drag to arrange" data-toggle="tooltip" data-placement="top" aria-label="Arrange"><i class="icon-arrows-v"></i> <span class="hidden">Arrange</span></a>
+										<a href="#/" class="q-remove icon-button" title="Remove" data-question-id="quest-24" data-toggle="tooltip" data-placement="top" aria-label="Remove"><i class="icon-trash"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="pure-g q-config hidden">
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group">
+										<label class="" for="activeFrom_quest-24">Active From:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeFrom_quest-24" name="activeFrom_quest-24" value="01/01/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="pure-control-group">
+										<label class="" for="activeTo_quest-24">Active To:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeTo_quest-24" name="activeTo_quest-24" value="12/12/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group escMethodControl">
+										<label class="" for="escMethod_quest-24">Escalation Method:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escMethod_quest-24" class="pure-u-1 pure-u-md-21-24 required-field escMethod" name="escMethod_quest-24">
+												<option value="">Select</option>
+												<option value="escalation-email">Escalation Email</option>
+												<option value="email-hierarchy" selected="selected">Email Field Hierarchy</option>
+											</select>
+										</div>
+									</div>
+									<div class="pure-control-group escEmailControl">
+										<label class="" for="escEmail_quest-24">Escalation Email:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escEmail_quest-24" class="pure-u-1 pure-u-md-21-24 required-field escEmail" name="escEmail_quest-24">
+												<option value="">Select</option>
+												<option value="director@marcell.com">director@marcell.com</option>
+												<option value="info@marcell.com">info@marcell.com</option>
+												<option value="marcellteam@marcell.com" selected="selected">marcellteam@marcell.com</option>
+												<option value="new-esc-email">Add New Email</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-6-24 q-conf-col">
+									<div class="pure-control-group">
+										<span class="label">Expected Answer:</span>
+										<label for="yes_quest-24" class="pure-radio">
+											<input id="yes_quest-24" type="radio" name="expectedAns_quest-24" checked="checked" class="required-field"> Yes
+										</label>
+										<label for="no_quest-2" class="pure-radio">
+											<input id="no_quest-24" type="radio" name="expectedAns_quest-24" class="required-field"> No
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--./Single Question-->
+						<!--Single Question-->
+						<div class="q-single" id="quest-23">
+							<div class="pure-g">
+								<div class="pure-u-1 q-row">
+									<div class="q-number"></div>
+									<div class="q-text pure-control-group"><span>Senior management and employees trust each other.</span></div>
+									<div class="q-buttons">
+										<a href="#/" class="q-edit icon-button" title="Edit" data-question-id="quest-23" data-toggle="tooltip" data-placement="top" aria-label="Edit"><i class="icon-pencil"></i></a>
+										<a href="#/" class="q-arrange icon-button q-handler" title="Click and drag to arrange" data-toggle="tooltip" data-placement="top" aria-label="Arrange"><i class="icon-arrows-v"></i> <span class="hidden">Arrange</span></a>
+										<a href="#/" class="q-remove icon-button" title="Remove" data-question-id="quest-23" data-toggle="tooltip" data-placement="top" aria-label="Remove"><i class="icon-trash"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="pure-g q-config hidden">
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group">
+										<label class="" for="activeFrom_quest-23">Active From:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeFrom_quest-23" name="activeFrom_quest-23" value="01/01/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="pure-control-group">
+										<label class="" for="activeTo_quest-23">Active To:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeTo_quest-23" name="activeTo_quest-23" value="12/12/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group escMethodControl">
+										<label class="" for="escMethod_quest-23">Escalation Method:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escMethod_quest-23" class="pure-u-1 pure-u-md-21-24 required-field escMethod" name="escMethod_quest-23">
+												<option value="">Select</option>
+												<option value="escalation-email">Escalation Email</option>
+												<option value="email-hierarchy" selected="selected">Email Field Hierarchy</option>
+											</select>
+										</div>
+									</div>
+									<div class="pure-control-group escEmailControl">
+										<label class="" for="escEmail_quest-23">Escalation Email:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escEmail_quest-23" class="pure-u-1 pure-u-md-21-24 required-field escEmail" name="escEmail_quest-23">
+												<option value="">Select</option>
+												<option value="director@marcell.com">director@marcell.com</option>
+												<option value="info@marcell.com">info@marcell.com</option>
+												<option value="marcellteam@marcell.com" selected="selected">marcellteam@marcell.com</option>
+												<option value="new-esc-email">Add New Email</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-6-24 q-conf-col">
+									<div class="pure-control-group">
+										<span class="label">Expected Answer:</span>
+										<label for="yes_quest-23" class="pure-radio">
+											<input id="yes_quest-23" type="radio" name="expectedAns_quest-2" checked="checked" class="required-field"> Yes
+										</label>
+										<label for="no_quest-2" class="pure-radio">
+											<input id="no_quest-23" type="radio" name="expectedAns_quest-2" class="required-field"> No
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--./Single Question-->
+						<!--Single Question-->
+						<div class="q-single" id="quest-22">
+							<div class="pure-g">
+								<div class="pure-u-1 q-row">
+									<div class="q-number"></div>
+									<div class="q-text pure-control-group"><span>I am satisfied that I have the opportunities to apply my talents and expertise.</span></div>
+									<div class="q-buttons">
+										<a href="#/" class="q-edit icon-button" title="Edit" data-question-id="quest-22" data-toggle="tooltip" data-placement="top" aria-label="Edit"><i class="icon-pencil"></i></a>
+										<a href="#/" class="q-arrange icon-button q-handler" title="Click and drag to arrange" data-toggle="tooltip" data-placement="top" aria-label="Arrange"><i class="icon-arrows-v"></i> <span class="hidden">Arrange</span></a>
+										<a href="#/" class="q-remove icon-button" title="Remove" data-question-id="quest-22" data-toggle="tooltip" data-placement="top" aria-label="Remove"><i class="icon-trash"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="pure-g q-config hidden">
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group">
+										<label class="" for="activeFrom_quest-22">Active From:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeFrom_quest-22" name="activeFrom_quest-22" value="01/01/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="pure-control-group">
+										<label class="" for="activeTo_quest-22">Active To:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<div class="input-group date">
+												<input type="text" placeholder="mm/dd/yyyy" class="required-field input-group-control" id="activeTo_quest-22" name="activeTo_quest-22" value="12/12/2016" />
+												<span class="input-group-addon"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-9-24 q-conf-col">
+									<div class="pure-control-group escMethodControl">
+										<label class="" for="escMethod_quest-22">Escalation Method:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escMethod_quest-22" class="pure-u-1 pure-u-md-21-24 required-field escMethod" name="escMethod_quest-22">
+												<option value="">Select</option>
+												<option value="escalation-email">Escalation Email</option>
+												<option value="email-hierarchy" selected="selected">Email Field Hierarchy</option>
+											</select>
+										</div>
+									</div>
+									<div class="pure-control-group escEmailControl">
+										<label class="" for="escEmail_quest-22">Escalation Email:</label>
+										<div class="pure-u-1 pure-u-md-12-24">
+											<select id="escEmail_quest-22" class="pure-u-1 pure-u-md-21-24 required-field escEmail" name="escEmail_quest-22">
+												<option value="">Select</option>
+												<option value="director@marcell.com">director@marcell.com</option>
+												<option value="info@marcell.com">info@marcell.com</option>
+												<option value="marcellteam@marcell.com" selected="selected">marcellteam@marcell.com</option>
+												<option value="new-esc-email">Add New Email</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-6-24 q-conf-col">
+									<div class="pure-control-group">
+										<span class="label">Expected Answer:</span>
+										<label for="yes_quest-22" class="pure-radio">
+											<input id="yes_quest-22" type="radio" name="expectedAns_quest-22" checked="checked" class="required-field"> Yes
+										</label>
+										<label for="no_quest-22" class="pure-radio">
+											<input id="no_quest-22" type="radio" name="expectedAns_quest-22" class="required-field"> No
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--./Question List-->
+					<!--
+					<div class="pure-g">
+						<div class="pure-u-1 text-right">
+							<button type="button" class="pure-button button-large pure-button-primary" id="q-saveConfig">Save</button>
+						</div>
+					</div>
+					-->
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer>
+			<div class="pure-g">
+				<div class="pure-u-1">
+					&copy; 2016 I Agree Surveys
+				</div>
+			</div>
+	</footer>
+	<!--Modal-->
+	<div id="modRemoveQuest" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="removeQuestTitleModTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h1 class="modal-title" id="removeQuestTitleModTitle">Remove Question</h1>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to remove the below question from MARCELL Store Survey?<br><br><strong id="modQuestionText"></strong></p>
+				</div>
+				<div class="modal-footer">
+					<a href="#/" class="pure-button" data-dismiss="modal" aria-hidden="true" id="modBtnCancel">Cancel</a> 
+					<a href="#/" class="pure-button pure-button-primary" id="modBtnRemoveQuest">Yes, remove question</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="mdlSaveSurveyConfig" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="saveSurveyConfigModTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">		
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h1 class="modal-title" id="saveSurveyConfigModTitle">Save Changes</h1>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to save the changes to <strong>MARCELL Store Survey</strong>?</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#/" class="pure-button" data-dismiss="modal" aria-hidden="true">Cancel</a> 
+					<a href="#/" class="pure-button pure-button-primary" id="mdlBtnSaveSurveyConfig">Yes, save my changes</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="mdlCancelSurveyConfig" class="modal fade warning" tabindex="-1" role="dialog" aria-labelledby="cancelSurveyConfigModTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">		
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h1 class="modal-title" id="cancelSurveyConfigModTitle">Cancel Changes</h1>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to cancel the changes to <strong>MARCELL Store Survey</strong>?</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#/" class="pure-button" id="">Yes</a> 
+					<a href="#/" class="pure-button" data-dismiss="modal" aria-hidden="true">No</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="modAddNewEscEmail" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addNewEscEmailModTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+		
+				<form class="pure-form" novalidate id="addEscalationEmail">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h1 class="modal-title" id="addNewEscEmailModTitle">Add New Escalation Email</h1>
+					</div>
+					<div class="modal-body">
+						<div class="pure-g">
+							<div class="pure-u-1 pure-u-md-1">
+								<div class="pure-control-group">
+									<label class="" for="escEmailName">Name:</label> 
+									<input type="text" id="escEmailName" name="escEmailName" />
+								</div>
+								<div class="pure-control-group">
+									<label class="" for="escEmail">Email:</label> 
+									<input type="email" id="escEmail" name="escEmail" placeholder="email@email.com" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#/" class="pure-button" id="modBtnCancelAddEscEmail" data-dismiss="modal" aria-hidden="true">Cancel</a>
+						<a href="#/" class="pure-button pure-button-primary" id="modBtnAddEscEmail">Add</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="modAddNewQuestion" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<form class="pure-form" novalidate id="addNewQuestion">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h1 class="modal-title" id="">Add New Question to the Question Bank</h1>
+					</div>
+					<div class="modal-body">
+						<div class="pure-g">
+							<div class="pure-u-1 pure-u-md-1">
+								<div class="pure-control-group">
+									<label class="" for="escEmailName">New Question:</label> 
+									<textarea placeholder="1000 characters maximum" rows="3" class=" pure-u-1 pure-u-md-24-24" id="qText_quest-new" name="qText_quest-new"></textarea>
+								</div>
+								<div class="pure-g">
+									<div class="pure-control-group pure-u-md-10-24">
+										<span class="label">Expected Answer:</span>
+										<label class="pure-radio inline-radio"><input id="yes_quest-new" type="radio" name="expectedAns_quest-new" class="input-radio"> Yes</label> 
+										<label class="pure-radio inline-radio"><input id="no_quest-new" type="radio" name="expectedAns_quest-new" class="input-radio"> No</label>
+									</div>
+									<div class="pure-control-group pure-u-md-14-24">
+										<label class="add-survey-flag">
+											<input type="checkbox" id="addToSurveyFlag" name="addToSurveyFlag" checked="checked"/> Add this question to the survey.
+										</label> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#/" class="pure-button" data-dismiss="modal" aria-hidden="true">Cancel</a>
+						<a href="#/" class="pure-button pure-button-primary" id="modBtnAddNewQuestion" data-question-id="quest-300" data-exp-answer="Yes" data-question-text="" data-is-added="">Add</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--./Modal-->
+	
+	<!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-id="numero1" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see the list of surveys.</h5>
+		<br/>
+      </li>
+      <li data-id="numero2" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the escalation emails. You also can add or edit them.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero3" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the reports.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero4" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <br/>
+		<h5>Here you can restart this tutorial.</h5>
+		<br/>
+      </li>
+      <li data-id="numero5" data-button="Next" data-options="tipLocation:left;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see all the questions. To add a question, first make a search, if doesn´t exist you can create it with the "Add New Question" link.</h5>
+		<br/>
+      </li>
+	  <li data-id="numero6" data-button="Close" data-options="tipLocation:right;tipAnimation:fade">
+        <br/>
+		<h5>Here you can see the questions already added to the current survey. You also can add, edit or remove them from the survey.</h5>
+		<br/>
+      </li>
+    </ol>
+
+	<script src="js/app-dist.js"></script>
+</body>
+</html>

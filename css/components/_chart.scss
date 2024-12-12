@@ -1,0 +1,64 @@
+.groupQuestion{
+	width:90%;     
+	background: #eee;  
+	margin: auto;
+}
+
+.titleGroup{
+	width:100%; 
+	background-color: #CFD8DC; 
+	padding: 0.7em; 
+	font-weight: 600; 
+	font-size: 1.4em;
+}
+
+.groupQuestion .date{
+	padding: 2px;
+	text-align: center;
+}
+
+.groupQuestion .graphic{
+	width:100%; 
+	text-align: center;
+}
+
+.btnGroup{
+	padding:10px; 
+	width:90%;
+	margin: 10px 10px 15px 10px;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent {
+  display: inline-block;
+  line-height: 160px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 2em;
+  color: #455A64;
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: 20px;
+  color: #455A64;
+}
+.angular {
+  margin-top: 100px;
+}
+.angular .chart {
+  margin-top: 0;
+}

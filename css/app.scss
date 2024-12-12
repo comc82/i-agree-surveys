@@ -1,0 +1,24 @@
+// Importing theme variables
+@import "components/variables";
+
+// Components
+@import "components/pure";
+@import "components/grids-responsive";
+@import "components/datepicker";
+@import "components/panels";
+@import "components/alertboxes";
+@import "components/modals";
+@import "components/tooltips";
+@import "components/popovers";
+@import "components/dropdowns";
+@import "components/spinners";
+@import "components/datepicker";
+@import "components/chart";
+@import "components/toastr";
+//@import "components/slimscroll";
+
+// Theme
+@import "theme"; 
+
+// Icons
+@import "../fonts/iagree";

@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'iagree';
+    src:    url('fonts/iagree.eot?5w4ov7');
+    src:    url('fonts/iagree.eot?5w4ov7#iefix') format('embedded-opentype'),
+        url('fonts/iagree.ttf?5w4ov7') format('truetype'),
+        url('fonts/iagree.woff?5w4ov7') format('woff'),
+        url('fonts/iagree.svg?5w4ov7#iagree') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'iagree' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spinner:before {
+    content: "\e902";
+}
+.icon-check:before {
+    content: "\e901";
+}
+.icon-plus-circle:before {
+    content: "\f055";
+}
+.icon-minus-circle:before {
+    content: "\f056";
+}
+.icon-times-circle:before {
+    content: "\f057";
+}
+.icon-check-circle:before {
+    content: "\f058";
+}
+.icon-question-circle:before {
+    content: "\f059";
+}
+.icon-info-circle:before {
+    content: "\f05a";
+}
+.icon-exclamation-circle:before {
+    content: "\f06a";
+}
+.icon-info-circle2:before {
+    content: "\e900";
+}
+.icon-search:before {
+    content: "\f002";
+}
+.icon-pencil:before {
+    content: "\f040";
+}
+.icon-calendar:before {
+    content: "\f073";
+}
+.icon-arrows-v:before {
+    content: "\f07d";
+}
+.icon-arrows-h:before {
+    content: "\f07e";
+}
+.icon-trash:before {
+    content: "\f1f8";
+}
+

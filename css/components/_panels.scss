@@ -1,0 +1,21 @@
+.panel {
+	background-color: #eeeeee;
+	
+	> .panel-header,
+	> .panel-body {
+		padding: 1em;
+	}
+	
+	> .panel-header {
+		background-color: #cfd8dc;
+		
+		a {
+			display: inline-block;
+		}
+		
+		h3 {
+			display: inline;
+		}
+	}
+	
+}
